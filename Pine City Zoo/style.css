@@ -81,6 +81,8 @@ body{
     background-repeat: repeat-y;
 }
 #content{
+    display: flex;
+    flex-direction: column;
     padding-top: 1px;
     padding-bottom: 50px;   
 }
@@ -117,5 +119,21 @@ a.info-box{
     float: right;
     margin-top: 25px;
     height: 40px;
-
 }
+/*########## INFO BOX FULL########*/
+
+#info-box-full{
+    background: rgba(255, 255, 244, .8);
+    width:90% ;
+    display: block;
+    margin: auto;
+    margin-top: 12px;
+    padding: 10px;
+}
+#info-box-full img{
+    width: 100%;
+}
+#info-box-full h3{
+    text-align: center;
+}
+
