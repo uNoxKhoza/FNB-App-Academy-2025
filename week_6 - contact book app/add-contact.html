@@ -7,9 +7,9 @@
     <body>
         <br/>
         <form id="editForm">
-            <label for="firstname">Firstname</label>
+            <label for="firstname">First name</label>
             <input type="text" name="firstname" id="firstname"><br/>
-            <label for="lastname">Lastname</label>
+            <label for="lastname">Last name</label>
             <input type="text" name="lastname" id="lastname"><br />
             <label for="mobile">Mobile</label>
             <input type="text" name="mobile" id="mobile"><br />
@@ -20,23 +20,23 @@
             <button type="submit" id="submitForm">Submit</button>
         </form>
         <br/>
-'        <button id="homelink" type="button">Home</button>
-'
+        <button id="homelink" type="button">Home</button>
+
         <script src="config.js"></script>
         <script>
             
             document.getElementById("submitForm").addEventListener('click', submitForm);
             document.getElementById("homeLink").addEventListener('click',homeLink);
 
-            function submitForm(){
+            function submitForm(e){
                 e.preventDefault();
 
-                const form = new FormData(document.querySelector("editForm"));
+                const form = new FormData(document.querySelector("#editForm"));
                 form.append('apiKey',apiKey);
 
                 fetch(rootPath +'controller/insert-contact/',{
                     method: 'POST',
-                    headers:{'Accept': 'application/json,*.*' },
+                    headers: {'Accept': 'application/json,*.*' },
                     body:form
                 })
                 .then(function(response){
