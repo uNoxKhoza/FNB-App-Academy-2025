@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter API Key</title>
+</head>
+<body>
+
+    <h2>Enter API Key</h2>
+    <input type="text" id="apiKeyInput" placeholder="Enter your API key here" />
+    <button onclick="saveApiKey()">Save</button>
+
+    <script>
+        function saveApiKey() {
+            const key = document.getElementById("apiKeyInput").value;
+            if (key.trim() !== "") {
+                localStorage.setItem("apiKey", key.trim());
+                alert("API Key saved!");
+                window.location.href = "index.html";
+            } else {
+                alert("Please enter a valid API key.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
