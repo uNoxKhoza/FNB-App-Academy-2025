@@ -11,4 +11,4 @@ print(result)
     
 def greet(name , greeting='hello'):
     print(f"{greeting}", name)  
-greet('Noxolo','Good Evening')
+greet('Nox','Good Evening')
